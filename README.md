@@ -1,11 +1,12 @@
 # Random API Docs
 
+The Official documentation for the [Random API](https://random-api-nu.vercel.app)
+
 ## Useful Links
 
-- The Official documentation for the [Random API](https://random-api-nu.vercel.app)
 - List of endpoints we provide -> [Endpoints](https://random-api-nu.vercel.app/endpoints)
-- Python Examples -> [Py Reference](https://github.com/TheRealShreyash/random-api-docs/examples/Python)
-- Javascript Examples -> [Js Reference]()
+- Python Examples -> [PY Reference](https://github.com/TheRealShreyash/random-api-docs/tree/main/examples/Python)
+- Javascript Examples -> [JS Reference](https://github.com/TheRealShreyash/random-api-docs/tree/main/examples)
 - Support at -> [Discord](https://dsc.gg/vistara-lounge)
 
 ## API Reference
