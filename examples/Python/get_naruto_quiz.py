@@ -2,9 +2,9 @@ import requests
 import aiohttp
 
 
-def get_trivia():
-    """Fetches a trivia for you form random-api"""
-    url = "https://random-api-nu.vercel.app/api/trivia"
+def get_naruto_quiz():
+    """Fetches a Naruto Quiz for you form random-api"""
+    url = "https://random-api-nu.vercel.app/api/naruto"
     res = requests.get(url)
     if res.status_code == 200:
         data = res.json()
@@ -21,9 +21,9 @@ def get_trivia():
         return error
 
 
-async def get_trivia_():
-    """Fetches a trivia for you form random-api"""
-    url = "https://random-api-nu.vercel.app/api/trivia"
+async def get_naruto_quiz_():
+    """Fetches a Naruto Quiz for you form random-api"""
+    url = "https://random-api-nu.vercel.app/api/naruto"
     async with aiohttp.ClientSession() as cs:
         async with cs.get(url) as res:
             if res.status == 200:
