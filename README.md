@@ -1,17 +1,14 @@
-# Random API Docs
+# Random API
 
-The Official documentation for the [Random API](https://random-api-nu.vercel.app)
+The API everyone needs, Serves fun with user friendly environment and makes developers life easy(maybe :D)
 
-## Useful Links
-
-- List of endpoints we provide -> [Endpoints](https://random-api-nu.vercel.app/endpoints)
-- Python Examples -> [PY Reference](https://github.com/TheRealShreyash/random-api-docs/tree/main/examples/Python)
-- Javascript Examples -> [JS Reference](https://github.com/TheRealShreyash/random-api-docs/tree/main/examples)
-- Support at -> [Discord](https://dsc.gg/vistara-lounge)
+<a href="https://random-api-nu.vercel.app">API URL</a>
 
 ## API Reference
 
-#### Get the version
+#### Get Version
+
+Check out when was API's latest version released
 
 ```http
   GET /api/version
@@ -23,11 +20,9 @@ The Official documentation for the [Random API](https://random-api-nu.vercel.app
   GET /api/quote
 ```
 
-| Endpoint | Response Type | Description                   |
-| :------- | :------------ | :---------------------------- |
-| `quote`  | `JSON`        | Returns a Quote from the API. |
-
-Also serves the author of the quote in the response.
+| Endpoint | Type     | Description                   |
+| :------- | :------- | :---------------------------- |
+| `quote`  | `string` | Returns a Quote from the API. |
 
 #### Get Roast
 
@@ -35,11 +30,9 @@ Also serves the author of the quote in the response.
   GET /api/roast
 ```
 
-| Endpoint | Response Type | Description                   |
-| :------- | :------------ | :---------------------------- |
-| `roast`  | `JSON`        | Returns a Roast from the API. |
-
-Also serves the id of the roast so you can report something related to that roast to the [Developer](https://github.com/TheRealShreyash) by posting issues on this repo.
+| Endpoint           | Type     | Description                  |
+| :----------------- | :------- | :--------------------------- |
+| `roast` | `string` | Returns a Roast from the API. |
 
 #### Get Question
 
@@ -47,11 +40,9 @@ Also serves the id of the roast so you can report something related to that roas
   GET /api/question
 ```
 
-| Endpoint   | Response Type | Description                      |
-| :--------- | :------------ | :------------------------------- |
-| `question` | `JSON`        | Returns a Question from the API. |
-
-Also serves the id of the question so you can report something related to that question to the [Developer](https://github.com/TheRealShreyash) by posting issues on this repo.
+| Endpoint   | Type     | Description                      |
+| :--------- | :------- | :------------------------------- |
+| `question` | `string` | Returns a Question from the API. |
 
 #### Get Trivia
 
@@ -59,29 +50,9 @@ Also serves the id of the question so you can report something related to that q
   GET /api/trivia
 ```
 
-| Endpoint | Response Type | Description                    |
-| :------- | :------------ | :----------------------------- |
-| `trivia` | `JSON`        | Returns a trivia from the API. |
-
-#### Get Token
-
-```http
-  GET /api/token
-```
-
-| Endpoint | Response Type | Description                       |
-| :------- | :------------ | :-------------------------------- |
-| `token`  | `JSON`        | Returns a 100% safe to use token. |
-
-#### Get Naruto Quiz
-
-```http
-  GET /api/naruto
-```
-
-| Endpoint | Response Type | Description                                                                |
-| :------- | :------------ | :------------------------------------------------------------------------- |
-| `naruto` | `JSON`        | Returns a question with 3 options and correct option which is one of them. |
+| Endpoint | Type     | Description                    |
+| :------- | :------- | :----------------------------- |
+| `trivia` | `string` | Returns a trivia from the API. |
 
 #### Get Beautified Image
 
@@ -89,9 +60,9 @@ Also serves the id of the question so you can report something related to that q
   GET /api/beautify
 ```
 
-| Endpoint   | Response Type | Description                              |
-| :--------- | :------------ | :--------------------------------------- |
-| `beautify` | `IMAGE`       | Returns a beautified image from the API. |
+| Endpoint   | Type    | Description                              |
+| :--------- | :------ | :--------------------------------------- |
+| `beautify` | `image` | Returns a beautified image from the API. |
 
 #### Get Blurred Image
 
@@ -99,9 +70,9 @@ Also serves the id of the question so you can report something related to that q
   GET /api/blur
 ```
 
-| Endpoint | Response Type | Description                           |
-| :------- | :------------ | :------------------------------------ |
-| `blur`   | `IMAGE`       | Returns a blurred image from the API. |
+| Endpoint | Type    | Description                           |
+| :------- | :------ | :------------------------------------ |
+| `blur`   | `image` | Returns a blurred image from the API. |
 
 #### Get Greyscaled Image
 
@@ -109,15 +80,36 @@ Also serves the id of the question so you can report something related to that q
   GET /api/greyscale
 ```
 
-| Endpoint    | Response Type | Description                              |
-| :---------- | :------------ | :--------------------------------------- |
-| `greyscale` | `IMAGE`       | Returns a greyscaled image from the API. |
+| Endpoint    | Type    | Description                              |
+| :---------- | :------ | :--------------------------------------- |
+| `greyscale` | `image` | Returns a greyscaled image from the API. |
 
-## Author
+## Usage/Examples
 
-- [TheRealShreyash](https://therealshreyash.github.io)
+```python
+import requests
 
-## Others
+url = requests.get("https://random-api-nu.vercel.app/api/quote")
+result = url.json()
+quote = result['quote']
+author = result['author']
+print(f"{quote}\n{author}")
+```
 
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![](https://img.shields.io/badge/Thanks%20for%20reading!-8A2BE2)]()
+## Output:
+
+```json
+The only way to do great work is to love what you do.
+Steve Jobs
+```
+
+## Links
+
+Need help ? Check out those links\
+
+[Docs](https://github.com/TheRealShreyash/random-api-docs)\
+[Discord](https://dsc.gg/vistara-lounge)
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
