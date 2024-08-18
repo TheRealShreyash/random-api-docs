@@ -1,14 +1,16 @@
-# Random API
+# Random API Docs
 
-The API everyone needs, Serves fun with user friendly environment and makes developers life easy(maybe :D)
+## Useful Links
 
-<a href="https://random-api-nu.vercel.app">API URL</a>
+- The Official documentation for the [Random API](https://random-api-nu.vercel.app)
+- List of endpoints we provide -> [Endpoints](https://random-api-nu.vercel.app/endpoints)
+- Python Examples -> [Py Reference]()
+- Javascript Examples -> [Js Reference]()
+- Support at -> [Discord](https://dsc.gg/vistara-lounge)
 
 ## API Reference
 
-#### Get Version
-
-Check out when was API's latest version released
+#### Get the version
 
 ```http
   GET /api/version
@@ -20,9 +22,11 @@ Check out when was API's latest version released
   GET /api/quote
 ```
 
-| Endpoint | Type     | Description                   |
-| :------- | :------- | :---------------------------- |
-| `quote`  | `string` | Returns a Quote from the API. |
+| Endpoint | Response Type | Description                   |
+| :------- | :------------ | :---------------------------- |
+| `quote`  | `JSON`        | Returns a Quote from the API. |
+
+Also serves the author of the quote in the response.
 
 #### Get Roast
 
@@ -30,9 +34,11 @@ Check out when was API's latest version released
   GET /api/roast
 ```
 
-| Endpoint           | Type     | Description                  |
-| :----------------- | :------- | :--------------------------- |
-| `roast` | `string` | Returns a Roast from the API. |
+| Endpoint | Response Type | Description                   |
+| :------- | :------------ | :---------------------------- |
+| `roast`  | `JSON`        | Returns a Roast from the API. |
+
+Also serves the id of the roast so you can report something related to that roast to the [Developer](https://github.com/TheRealShreyash) by posting issues on this repo.
 
 #### Get Question
 
@@ -40,9 +46,11 @@ Check out when was API's latest version released
   GET /api/question
 ```
 
-| Endpoint   | Type     | Description                      |
-| :--------- | :------- | :------------------------------- |
-| `question` | `string` | Returns a Question from the API. |
+| Endpoint   | Response Type | Description                      |
+| :--------- | :------------ | :------------------------------- |
+| `question` | `JSON`        | Returns a Question from the API. |
+
+Also serves the id of the question so you can report something related to that question to the [Developer](https://github.com/TheRealShreyash) by posting issues on this repo.
 
 #### Get Trivia
 
@@ -50,9 +58,29 @@ Check out when was API's latest version released
   GET /api/trivia
 ```
 
-| Endpoint | Type     | Description                    |
-| :------- | :------- | :----------------------------- |
-| `trivia` | `string` | Returns a trivia from the API. |
+| Endpoint | Response Type | Description                    |
+| :------- | :------------ | :----------------------------- |
+| `trivia` | `JSON`        | Returns a trivia from the API. |
+
+#### Get Token
+
+```http
+  GET /api/token
+```
+
+| Endpoint | Response Type | Description                       |
+| :------- | :------------ | :-------------------------------- |
+| `token`  | `JSON`        | Returns a 100% safe to use token. |
+
+#### Get Naruto Quiz
+
+```http
+  GET /api/naruto
+```
+
+| Endpoint | Response Type | Description                                                                |
+| :------- | :------------ | :------------------------------------------------------------------------- |
+| `naruto` | `JSON`        | Returns a question with 3 options and correct option which is one of them. |
 
 #### Get Beautified Image
 
@@ -60,9 +88,9 @@ Check out when was API's latest version released
   GET /api/beautify
 ```
 
-| Endpoint   | Type    | Description                              |
-| :--------- | :------ | :--------------------------------------- |
-| `beautify` | `image` | Returns a beautified image from the API. |
+| Endpoint   | Response Type | Description                              |
+| :--------- | :------------ | :--------------------------------------- |
+| `beautify` | `IMAGE`       | Returns a beautified image from the API. |
 
 #### Get Blurred Image
 
@@ -70,9 +98,9 @@ Check out when was API's latest version released
   GET /api/blur
 ```
 
-| Endpoint | Type    | Description                           |
-| :------- | :------ | :------------------------------------ |
-| `blur`   | `image` | Returns a blurred image from the API. |
+| Endpoint | Response Type | Description                           |
+| :------- | :------------ | :------------------------------------ |
+| `blur`   | `IMAGE`       | Returns a blurred image from the API. |
 
 #### Get Greyscaled Image
 
@@ -80,36 +108,35 @@ Check out when was API's latest version released
   GET /api/greyscale
 ```
 
-| Endpoint    | Type    | Description                              |
-| :---------- | :------ | :--------------------------------------- |
-| `greyscale` | `image` | Returns a greyscaled image from the API. |
+| Endpoint    | Response Type | Description                              |
+| :---------- | :------------ | :--------------------------------------- |
+| `greyscale` | `IMAGE`       | Returns a greyscaled image from the API. |
 
-## Usage/Examples
+#### Get Pixelated Image
 
-```python
-import requests
-
-url = requests.get("https://random-api-nu.vercel.app/api/quote")
-result = url.json()
-quote = result['quote']
-author = result['author']
-print(f"{quote}\n{author}")
+```http
+  GET /api/pixelate
 ```
 
-## Output:
+| Endpoint   | Response Type | Description                             |
+| :--------- | :------------ | :-------------------------------------- |
+| `pixelate` | `IMAGE`       | Returns a pixelated image from the API. |
 
-```json
-The only way to do great work is to love what you do.
-Steve Jobs
+#### Get Qrcode
+
+```http
+  GET /api/qrcode
 ```
 
-## Links
+| Endpoint | Response Type | Description                              |
+| :------- | :------------ | :--------------------------------------- |
+| `qrcode` | `IMAGE`       | Returns a qrcode of an url from the API. |
 
-Need help ? Check out those links\
+## Author
 
-[Docs](https://github.com/TheRealShreyash/random-api-docs)\
-[Discord](https://dsc.gg/vistara-lounge)
+- [TheRealShreyash](https://therealshreyash.github.io)
 
-## License
+## Others
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![](https://img.shields.io/badge/Thanks%20for%20reading!-8A2BE2)]()
